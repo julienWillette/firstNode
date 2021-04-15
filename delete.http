@@ -1,0 +1,6 @@
+DELETE http://localhost:3000/api/wiler/delete HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "6075b28a4c3f6533b64d3016"
+}
