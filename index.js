@@ -1,10 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose")
 const WilderModel = require("./models/Wilder")
+const cors = require("cors");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 const wilderModel = require("./models/Wilder");
 
@@ -54,4 +56,4 @@ app.put("/api/wilder/update", wilderController.update);
 app.delete("/api/wilder/delete", wilderController.delete);
 
 //start Server
-app.listen(3000, () => console.log("Server started on 3000"));
+app.listen(3001, () => console.log("Server started on 3001"));
